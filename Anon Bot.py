@@ -275,4 +275,4 @@ async def invite(ctx):
     await bot.say("This is my invite link.")
     await bot.say("Yeaaah, not getting this.")
 
-bot.run("This either.")
+bot.run(os.environ['BOT_TOKEN'])
