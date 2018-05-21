@@ -1,0 +1,6 @@
+discord.py[voice]
+asyncio
+random
+os
+time
+datetime
