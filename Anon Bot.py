@@ -273,6 +273,6 @@ async def discrim(ctx, discrim):
 async def invite(ctx):
     """Gets Anon's invite link."""
     await bot.say("This is my invite link.")
-    await bot.say("https://discordapp.com/oauth2/authorize?&client_id=436874723725410305&scope=bot&permissions=470019135")
+    await bot.say("Yeaaah, not getting this.")
 
-bot.run("NDM2ODc0NzIzNzI1NDEwMzA1.Dbw66g.EwI9rSV1XVBCOfS5we00xGj5qo8")
+bot.run("This either.")
