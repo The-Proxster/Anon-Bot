@@ -1,1 +1,1 @@
-worker: python Anon_Bot.py
+worker: python anon_bot.py
