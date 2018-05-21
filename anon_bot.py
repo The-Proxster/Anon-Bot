@@ -30,7 +30,7 @@ async def info_embed(ctx, user: discord.Member):
     embed.set_thumbnail(url=user.avatar_url)
     await bot.say(embed=embed)
 
-@bot.command(pass_cotext=True)
+@bot.command(pass_context=True)
 async def avatar(user: discord.Member):
     embed = discord.Embed(title="{}'s avatar".format(user.name), description="Just drag to save.", color=0xff0000)
     embed.add_field(name="Avatar", value=user.avatar_image)
