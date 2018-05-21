@@ -66,10 +66,5 @@ async def on_member_join(member):
 @bot.event
 async def on_member_remove(member):
     await bot.send_message(member, "Farewell, please enjoy the rest of your time on Earth. We hope to see you again soon.")
-
-@bot.event
-async def on_message_delete(message):
-    fmt = "{0.author.name} has deleted the message:\n{0.content}"
-    await bot.send_message(message.channel(bot.get_channel('447205976785944576'), fmt.format(message))
                            
 bot.run(os.environ['BOT_TOKEN'])
