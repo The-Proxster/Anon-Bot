@@ -152,7 +152,7 @@ async def eightball(ctx):
 
 @bot.command(pass_context=True)
 async def dm(ctx, user: discord.Member, *, message: str):
-    await bot.send_message(member, message)
+    await bot.send_message(user, message)
     await bot.say("DM'd.")
 
 @bot.command(pass_context=True)
