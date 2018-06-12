@@ -165,7 +165,7 @@ async def diceroll(ctx):
 async def on_message_delete(message, member):
     await bot.send_message(message + ' Was deleted by: ' + member)
 
-@bot.commnd(pass_context=True)
+@bot.command(pass_context=True)
 @commands.has_role("Admin")
 async def mute(ctx, user: discord.Member):
     role = discord.utils.get(user.server.roles, name='Muted')
