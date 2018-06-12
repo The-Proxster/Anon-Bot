@@ -9,6 +9,7 @@ import datetime
 import os
 
 bot = commands.Bot(command_prefix='?A ')
+
 @bot.event
 async def on_ready():
     print ("Anon Bot online.")
@@ -164,6 +165,13 @@ async def diceroll(ctx):
 async def on_message_delete(message, member):
     await bot.send_message(message + ' Was deleted by: ' + member)
 
+@bot.commnd(pass_context=True)
+@commands.has_role("Admin")
+async def mute(ctx, user: discord.Member):
+    role = discord.utils.get(user.server.roles, name='Muted')
+    await bot.add_roles(user, role)
+    await bot.say("{} has been muted.".format(user.name))    
+    
 @bot.event
 async def on_member_remove(member):
     await bot.send_message(member, "Farewell, please enjoy the rest of your time on Earth. We hope to see you again soon.")
